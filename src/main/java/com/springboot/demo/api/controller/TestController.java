@@ -35,7 +35,7 @@ import com.springboot.demo.api.tool.AuthToolException;
 
 import sun.misc.BASE64Encoder;
 
-@Controller
+@RestController
 @RequestMapping("/test")
 public class TestController {
     
@@ -51,7 +51,9 @@ public class TestController {
     
     @GetMapping("/{userId}/user")
     public User testUser(@PathVariable Integer userId, String languarge, @TestAnnotation String testId) {
-        
+
+        service.testService();
+
         User user = new User();
         user.setUserId(userId);
         testSpringInit.testMethod();
@@ -65,8 +67,8 @@ public class TestController {
         }
         
         System.out.println(sqlSessionFactory);
-        Object object = AopContext.currentProxy();
-        System.out.println(object);
+//        Object object = AopContext.currentProxy();
+//        System.out.println(object);
         service.testService();
         return user;
         //throw new NullPointerException("userId is null");

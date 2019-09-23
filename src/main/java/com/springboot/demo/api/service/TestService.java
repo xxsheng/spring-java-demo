@@ -21,7 +21,7 @@ public class TestService implements ITestService{
     
     public void testService() {
         System.out.println("-------service-------");
-        Object object = AopContext.currentProxy();
-        System.out.println(object);
+//        Object object = AopContext.currentProxy();
+//        System.out.println(object);
     }
 }

@@ -26,7 +26,10 @@ public class AopClass {
     
     @Pointcut("execution( public * com.springboot.demo.*.interf..*.*(..))")
     public void interfaceAdvice() {};
-    
+
+    @Pointcut("execution( public * com.springboot.demo.*.service..*.*(..))")
+    public void serviceAdvice() {};
+
     @Before("addAdvice()")
     public void doBefor(JoinPoint joint) {
         Method method = ((MethodSignature) joint.getSignature()).getMethod();
@@ -40,10 +43,16 @@ public class AopClass {
         System.out.println("target class name is ----------------" + joint.getTarget().getClass().getName());
         System.out.println("this class name is ------------------" + joint.getThis().getClass().getName());
         System.out.println("---------------------------------------------------------");
-        Object object = AopContext.currentProxy();
-        System.out.println(object);
+//        Object object = AopContext.currentProxy();
+//        System.out.println(object);
     }
-    
+
+    @Before("serviceAdvice()")
+    public void doBeforeService(JoinPoint joinPoint){
+
+        System.out.println("-----------------");
+    }
+
     @Before("interfaceAdvice()")
     public void doBefore(JoinPoint joint) {
         Method method = ((MethodSignature) joint.getSignature()).getMethod();

@@ -11,3 +11,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     tomcat:
       test-on-borrow: true
+   aop:
+#     proxy-target-class: true
+     auto: false
+logging:
+  level:
+    root: debug
+
