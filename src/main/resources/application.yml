@@ -16,5 +16,9 @@ spring:
      auto: false
 logging:
   level:
-    root: debug
+    root: info
 
+xxq:
+  name: xiaxiuqiang
+  age: 25
+  sex: false

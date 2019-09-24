@@ -11,7 +11,11 @@ import org.springframework.stereotype.Component;
  */
 public class TestSpringInit {
 
+    public TestSpringInit() {
+        System.out.println("--------xxxxxxxx-----------");
+    }
+
     public void testMethod() {
-        System.out.println("-------------------");
+        System.out.println("--------xxxxxxxx-----------");
     }
 }
