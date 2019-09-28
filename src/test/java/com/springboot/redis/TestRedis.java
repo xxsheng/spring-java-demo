@@ -153,6 +153,10 @@ public class TestRedis {
 
     @Test
     public void test8() {
-        redisTemplate.opsForList().leftPush("test:1", "test3", "test1");
+//        System.out.println(redisTemplate.opsForList().leftPush("test:1", "test6"));
+//        redisTemplate.opsForValue().set("test:2", "test3");
+//        System.out.println(redisTemplate.opsForList().leftPush("test:3", "test3"));
+        System.out.println(redisTemplate.opsForList().range("test:1",0,-1));
     }
+
 }

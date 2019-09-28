@@ -17,7 +17,9 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.TestA;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.logging.log4j.ThreadContext;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -48,7 +50,15 @@ public class TestController {
     
     @Autowired
     private TestService service;
-    
+
+
+
+    @GetMapping("/filter")
+    public String testFilter() {
+//        ThreadLocal local = new ThreadLocal();
+        return ThreadContext.get("uuid");
+    }
+
     @GetMapping("/{userId}/user")
     public User testUser(@PathVariable Integer userId, String languarge, @TestAnnotation String testId) {
 

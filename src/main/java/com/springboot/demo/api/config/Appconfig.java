@@ -58,4 +58,9 @@ public class Appconfig {
         JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout, null, 10);
         return  jedisPool;
     }
+
+    @Bean
+    public Filter filter() {
+        return new Filter();
+    }
 }
