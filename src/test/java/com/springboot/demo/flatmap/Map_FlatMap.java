@@ -6,6 +6,7 @@ package com.springboot.demo.flatmap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -43,5 +44,10 @@ public class Map_FlatMap {
     @Test
     public void flatMap() {
         eggs.stream().flatMap(x -> Arrays.stream(x).map(y -> y.replace("鸡", "煎"))).forEach(x -> System.out.println("学生" + student++ + ":" + x));
+    }
+
+    @Test
+    public void stream() {
+        Stream.of(null).findFirst();
     }
 }
