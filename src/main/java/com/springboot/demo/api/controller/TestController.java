@@ -17,7 +17,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.TestA;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.ThreadContext;
 import org.springframework.aop.framework.AopContext;

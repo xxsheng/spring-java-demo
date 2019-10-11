@@ -59,8 +59,8 @@ public class Appconfig {
         return  jedisPool;
     }
 
-    @Bean
-    public Filter filter() {
-        return new Filter();
-    }
+//    @Bean
+//    public Filter filter() {
+//        return new Filter();
+//    }
 }

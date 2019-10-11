@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-//@ServletComponentScan("com")
+@ServletComponentScan("com")
 @SpringBootApplication
 @ComponentScan(basePackages="com.springboot.demo")
 //@EnableAspectJAutoProxy
