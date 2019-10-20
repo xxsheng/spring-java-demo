@@ -10,7 +10,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-@ServletComponentScan("com")
+@ServletComponentScan("com.springboot.demo.api.config.filter")
 @SpringBootApplication
 @ComponentScan(basePackages="com.springboot.demo")
 //@EnableAspectJAutoProxy(exposeProxy = true)

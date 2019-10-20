@@ -1,8 +1,10 @@
-package com.springboot.demo.api.config;
+package com.springboot.demo.api.config.filter;
 
 import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -12,8 +14,12 @@ import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.util.UUID;
 
-@WebFilter(filterName = "xxxx")
+//@WebFilter(filterName = "xxx")
+@Component
 public class Filter implements javax.servlet.Filter {
+
+    @Value("${abc.yvc}")
+    private String tmp;
 
     @Autowired
     RedisTemplate redisTemplate;

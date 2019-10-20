@@ -22,6 +22,7 @@ import org.apache.logging.log4j.ThreadContext;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +39,7 @@ import sun.misc.BASE64Encoder;
 
 @RestController
 @RequestMapping("/test")
+@Transactional(readOnly = true)
 public class TestController {
     
     @Autowired
@@ -66,7 +68,7 @@ public class TestController {
         User user = new User();
         user.setUserId(userId);
         testSpringInit.testMethod();
-        
+
         System.out.println(TestController.class.getClassLoader());
         
         clazz.add(new TestController());
