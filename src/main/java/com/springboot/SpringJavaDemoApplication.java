@@ -20,4 +20,9 @@ public class SpringJavaDemoApplication {
 		SpringApplication.run(SpringJavaDemoApplication.class, args);
 	}
 
+    public static void main1(String[] args) {
+        String json = "[{\"businesstype\":\"DSC90\",\"cmTime\":\"2019-09-10 11:09:51\",\"cmUser\":\"000017\",\"companyCode\":\"KH03\",\"data\":\"{\\\"args\\\":{\\\"dimension1\\\":\\\"KH03\\\"}}\",\"opUser\":\"\",\"orderNo\":\"26KH031909100094\",\"orderNodeNext\":\"1\",\"orderNodeNow\":\"0\",\"orderType\":\"dsczichanform\",\"sysCode\":\"FsopForm\"}]";
+        Gson gson = new Gson();
+//        gson.to
+    }
 }

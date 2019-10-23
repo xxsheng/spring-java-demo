@@ -17,6 +17,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.springboot.demo.api.abstractClass.AbstractTest1;
+import com.springboot.demo.api.service.ITestService;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.ThreadContext;
 import org.springframework.aop.framework.AopContext;
@@ -50,9 +52,7 @@ public class TestController {
     private SqlSessionFactory sqlSessionFactory;
     
     @Autowired
-    private TestService service;
-
-
+    private ITestService testService2;
 
     @GetMapping("/filter")
     public String testFilter() {
@@ -63,12 +63,12 @@ public class TestController {
     @GetMapping("/{userId}/user")
     public User testUser(@PathVariable Integer userId, String languarge, @TestAnnotation String testId) {
 
-        service.testService();
+        testService2.testService();
 
         User user = new User();
         user.setUserId(userId);
         testSpringInit.testMethod();
-
+        
         System.out.println(TestController.class.getClassLoader());
         
         clazz.add(new TestController());
@@ -80,7 +80,7 @@ public class TestController {
         System.out.println(sqlSessionFactory);
 //        Object object = AopContext.currentProxy();
 //        System.out.println(object);
-        service.testService();
+        testService2.testService();
         return user;
         //throw new NullPointerException("userId is null");
         //throw new ApplicationException(AuthToolException.AU_NO_OUT_OPERATION_PERMISSION);

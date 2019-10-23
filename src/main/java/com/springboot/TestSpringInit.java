@@ -18,5 +18,8 @@ public class TestSpringInit {
     public void testMethod() {
         System.out.println("--------xxxxxxxx-----------");
         System.out.println("--------------");
+        System.out.println("--------xxxxxxxx-----------");
+        System.out.println("--------------");
+        System.out.println("--------------");
     }
 }

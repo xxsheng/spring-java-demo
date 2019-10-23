@@ -26,6 +26,9 @@ public class ServerConfig implements ApplicationListener<WebServerInitializedEve
         log.info("Get uriEncoding port {}", uriEncoding);
         
         //log.info("Get WebServer port {}", serverPort);
+
+
+
     }
 
 }
