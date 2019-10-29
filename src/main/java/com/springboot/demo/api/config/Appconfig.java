@@ -63,4 +63,9 @@ public class Appconfig {
 //    public Filter filter() {
 //        return new Filter();
 //    }
+
+    @Bean
+    public XXQTest createXXq(){
+        return new XXQTest();
+    }
 }
