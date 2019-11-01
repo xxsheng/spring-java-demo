@@ -1,9 +1,9 @@
 package com.springboot.demo.api.domain;
 
-import com.xxq.sdk.processor.annotation.JpaConverter;
+//import com.xxq.sdk.processor.annotation.JpaConverter;
 import lombok.Getter;
 
-@JpaConverter
+//@JpaConverter
 public enum Sex {
     MAN((int)0),
     FEMAL((int)1);

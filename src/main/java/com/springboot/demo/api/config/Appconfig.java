@@ -68,6 +68,11 @@ public class Appconfig {
 //    }
 
     @Bean
+    public XXQTest createXXq(){
+        return new XXQTest();
+    }
+
+    @Bean
     public SimpleMappingExceptionResolver SimpleMappingExceptionResolver() {
         SimpleMappingExceptionResolver resolver = new SimpleMappingExceptionResolver();
         resolver.setDefaultErrorView("error");

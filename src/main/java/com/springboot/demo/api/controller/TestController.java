@@ -17,7 +17,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.springboot.demo.api.abstractClass.AbstractTest1;
 import com.springboot.demo.api.service.ITestService;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.ThreadContext;
