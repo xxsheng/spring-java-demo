@@ -8,9 +8,12 @@ import org.springframework.context.annotation.Configuration;
 
 import com.springboot.demo.api.domain.User;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+
+import java.util.Properties;
 
 @Configuration
 @PropertySource("classpath:redis.properties")
@@ -63,4 +66,16 @@ public class Appconfig {
 //    public Filter filter() {
 //        return new Filter();
 //    }
+
+    @Bean
+    public SimpleMappingExceptionResolver SimpleMappingExceptionResolver() {
+        SimpleMappingExceptionResolver resolver = new SimpleMappingExceptionResolver();
+        resolver.setDefaultErrorView("error");
+        resolver.setExceptionAttribute("ex");
+        Properties properties = new Properties();
+        properties.setProperty("Exception", "error/ioexp");
+        resolver.setExceptionMappings(properties);
+
+        return resolver;
+    }
 }

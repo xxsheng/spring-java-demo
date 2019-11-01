@@ -57,6 +57,7 @@ public class TestController {
     @GetMapping("/filter")
     public String testFilter() {
 //        ThreadLocal local = new ThreadLocal();
+        System.out.println(2/0);
         return ThreadContext.get("uuid");
     }
 
