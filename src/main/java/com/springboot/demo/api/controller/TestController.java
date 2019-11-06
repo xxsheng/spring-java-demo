@@ -42,7 +42,7 @@ import sun.misc.BASE64Encoder;
 @RequestMapping("/test")
 @Transactional(readOnly = true)
 public class TestController {
-    
+
     @Autowired
     TestSpringInit testSpringInit;
     public  List<Object> clazz = new ArrayList<Object>();
@@ -52,6 +52,8 @@ public class TestController {
     
     @Autowired
     private ITestService testService2;
+
+    public Object o = new Object();
 
     @GetMapping("/filter")
     public String testFilter() {
@@ -160,4 +162,34 @@ public class TestController {
         return outStream.toByteArray();
     }
 
+    public static void main(String[] args) {
+//        System.out.println("222");
+//
+//        new Thread(()->{
+//
+//            System.out.println("sss");
+////            System.out.println(this);
+////            System.out.println(o);
+//        }).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(this);
+//                System.out.println(o);
+            }
+        }).start();
+
+//        Runnable run = () -> {
+//            System.out.println("-----");
+//
+//        };
+//        Runnable run1 = new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println(this);
+//            }
+//        };
+//        Thread
+    }
 }
