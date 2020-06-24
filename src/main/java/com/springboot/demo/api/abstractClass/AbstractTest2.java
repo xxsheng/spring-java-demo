@@ -36,8 +36,8 @@ public abstract class AbstractTest2 implements CommandLineRunner {
     @Autowired
     TestService testService;
 
-    @Lookup
-    abstract User createdUser();
+//    @Lookup
+//    abstract User createdUser();
 
 }
 
@@ -47,15 +47,15 @@ class User {
 
         }
 
-@Component
-class Test1 extends AbstractTest1 {
-
-    @Override
-    public void run(String... args) throws Exception {
-        System.out.println(super.testController);
-        System.out.println("---");
-    }
-}
+//@Component
+//class Test1 extends AbstractTest1 {
+//
+//    @Override
+//    public void run(String... args) throws Exception {
+//        System.out.println(super.testController);
+//        System.out.println("---");
+//    }
+//}
 
 @Component
 class Test2 extends AbstractTest1 {

@@ -17,6 +17,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.springboot.demo.api.interf.Interface2;
 import com.springboot.demo.api.service.ITestService;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.ThreadContext;
@@ -53,6 +54,9 @@ public class TestController {
     @Autowired
     private ITestService testService2;
 
+//    @Autowired
+//    private Interface2 interface2;
+
     public Object o = new Object();
 
     @GetMapping("/filter")
@@ -60,6 +64,11 @@ public class TestController {
 //        ThreadLocal local = new ThreadLocal();
         System.out.println(2/0);
         return ThreadContext.get("uuid");
+    }
+
+    @GetMapping("/service2")
+    public void testService2() {
+//        interface2.sayHello();
     }
 
     @GetMapping("/{userId}/user")

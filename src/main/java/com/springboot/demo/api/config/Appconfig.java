@@ -3,6 +3,8 @@ package com.springboot.demo.api.config;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.server.WebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -82,5 +84,18 @@ public class Appconfig {
         resolver.setExceptionMappings(properties);
 
         return resolver;
+    }
+
+    @Bean
+    public WebServerFactoryCustomizer webServerFactoryCustomizer() {
+
+        new Thread(()->{
+            System.out.println("--");
+        });
+
+
+        return (t) -> {
+            System.out.println("---");
+        };
     }
 }

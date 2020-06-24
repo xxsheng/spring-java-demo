@@ -12,14 +12,14 @@ spring:
     tomcat:
       test-on-borrow: true
    aop:
-#     proxy-target-class: true
-     auto: false
+#     proxy-target-class: false
+#     auto: false
 logging:
   level:
     root: info
 
 xxq:
-  name: xiaxiuqiang
+  last-name1: 123456
   age: 25
   sex: false
 

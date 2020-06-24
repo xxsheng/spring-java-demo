@@ -30,6 +30,9 @@ public class AopClass {
     @Pointcut("execution( public * com.springboot.demo.*.service..*.*(..))")
     public void serviceAdvice() {};
 
+    
+
+
     @Before("addAdvice()")
     public void doBefor(JoinPoint joint) {
         Method method = ((MethodSignature) joint.getSignature()).getMethod();
@@ -53,11 +56,13 @@ public class AopClass {
         System.out.println("-----------------");
     }
 
-    @Before("interfaceAdvice()")
-    public void doBefore(JoinPoint joint) {
-        Method method = ((MethodSignature) joint.getSignature()).getMethod();
-        System.out.println(joint.getTarget());
-        System.out.println(joint.getThis());
-//        method.invoke(obj, args)
-    }
+//    @Before("interfaceAdvice()")
+//    public void doBefore(JoinPoint joint) {
+//        Method method = ((MethodSignature) joint.getSignature()).getMethod();
+//        System.out.println(joint.getTarget());
+//        System.out.println(joint.getThis());
+////        method.invoke(obj, args)
+//    }
+
+
 }

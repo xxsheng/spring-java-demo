@@ -13,7 +13,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ServletComponentScan("com.springboot.demo.api.config.filter")
 @SpringBootApplication
 @ComponentScan(basePackages="com.springboot.demo")
-//@EnableAspectJAutoProxy(exposeProxy = true)
+@EnableAspectJAutoProxy(exposeProxy = true)
 public class SpringJavaDemoApplication {
 
 	public static void main(String[] args) {

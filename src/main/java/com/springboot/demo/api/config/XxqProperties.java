@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @Getter
 public class XxqProperties {
 
-    private String name;
+    private String lastName;
 
     private Integer age;
 
